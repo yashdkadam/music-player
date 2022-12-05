@@ -6,7 +6,7 @@ async function getArtists() {
   for (index in data) {
     $(".slider-component-artist").append(`
       <div class="card" style="width: 8rem;background: #1a1a1a; padding: 10px;" onclick="redirectFunction('${data[index]}', 'artist')">
-                <img src="/static/Logo.png" class="card-img-top" alt="..." style="border-radius: 50%;">
+                <img src="/music-player/static/Logo.png" class="card-img-top" alt="..." style="border-radius: 50%;">
                 <div class="card-body" style="padding: 6px;">
                     <p class="card-text subtitle">${data[index]}</p>
                 </div>
@@ -20,7 +20,7 @@ async function getArtists() {
   for (index in data1) {
     $(".slider-component-album").append(`
       <div class="card" style="width: 8rem;background: #1a1a1a; padding: 10px;" onclick="redirectFunction('${data1[index]}', 'album')">
-                <img src="/static/Logo.png" class="card-img-top" alt="..." style="border-radius: 50%;">
+                <img src="/music-player/static/Logo.png" class="card-img-top" alt="..." style="border-radius: 50%;">
                 <div class="card-body" style="padding: 6px;">
                     <p class="card-text subtitle">${data1[index]}</p>
                 </div>
@@ -43,5 +43,5 @@ getArtists();
 
 function redirectFunction(artist, type) {
   localStorage.setItem(type, artist);
-  window.location.href = "/player/index.html";
+  window.location.href = "/music-player/player/index.html";
 }
