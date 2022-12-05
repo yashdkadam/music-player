@@ -16,7 +16,7 @@ async function getArtists() {
   const res1 = await $.get(
     "https://curious-parka-yak.cyclic.app/api/songs/get/albums"
   );
-  let data1 = Object.values(res);
+  let data1 = Object.values(res1);
   for (index in data1) {
     $(".slider-component-album").append(`
       <div class="card" style="width: 8rem;background: #1a1a1a; padding: 10px;" onclick="redirectFunction('${data1[index]}', 'album')">
@@ -33,12 +33,14 @@ async function getArtists() {
     slidesToScroll: 1,
     infinite: false,
     arrows: false,
+    speed: 1500,
   });
   $(".slider-component-album").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: false,
     arrows: false,
+    speed: 1500,
   });
 }
 getArtists();
