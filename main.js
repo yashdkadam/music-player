@@ -32,11 +32,13 @@ async function getArtists() {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: false,
+    arrows: false,
   });
   $(".slider-component-album").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: false,
+    arrows: false,
   });
 }
 getArtists();
